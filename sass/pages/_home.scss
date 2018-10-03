@@ -1,0 +1,10 @@
+/* The design page shows a sharp cut in our top header 
+it uses clip-path to make that cut at 75vh so we have 20 vh left of white space to fill to do that we will add negative margin to the section-about page we do that using
+margin-top: -20vh;
+*/
+
+.section-about {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
