@@ -1,7 +1,7 @@
 # Natours- Advanced-CSS
 <ul>
 <li>This website is part of an  <strong>Advanced css</strong> course on udemy.</li>
-<li>The purpose of this particular project is to learn  <strong>Sass syntax, 7-1 pattern, and re-using components</strong>. </li>
+<li>The purpose of this particular project is to learn  <strong>Sass syntax, 7-1 pattern, re-using components, custom grid using floats and responsive design</strong>. </li>
 <li>The <i>In-Development-Demo</i> of the project can be found at https://bhosalet.github.io/Natours-advanced-css/ </li>
 </ul>
 
