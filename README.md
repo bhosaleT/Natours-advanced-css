@@ -18,4 +18,10 @@ npm run compile:sass
 <li>Sass 7 to 1 pattern</li>
 <li>Custom grid using floats</li>
 <li>clearfix mixin</li>
+<li>Flip-Card css animations </li>
+<li>Playing video as a background </li>
+<li>Navigation Overlay </li>
+<li>Custom Radio Buttons</li>
+ 
+  
 
