@@ -65,7 +65,7 @@
     background-blend-mode: screen; /* Modern css property to blend the two backgrounds. */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-radius: 10px;
+    border-radius: 3px;
     // picture 1.
     &--1 {
       background-image: linear-gradient(
