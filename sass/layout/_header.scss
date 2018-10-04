@@ -12,6 +12,7 @@
   background-position: top;
   /* The top of the image always stays the bottom gets cropped. */
   /* Move in the clockwise direction to check which co-ordinates are moving x or Y */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
