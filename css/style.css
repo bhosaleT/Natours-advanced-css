@@ -1,3 +1,4 @@
+/* Font */
 * {
   margin: 0;
   padding: 0;
@@ -84,11 +85,27 @@ body {
     transform: translateY(-2px) scale(1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.3); }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-80 {
+.u-margin-bottom-big {
   margin-bottom: 8rem; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem; }
 
 /* BUTTON AND PSEUDO ELEMENTS */
 /* pseudo class link  styling element under a special state*/
@@ -111,6 +128,62 @@ body {
 .btn-white {
   background-color: #ffffff;
   color: #777777; }
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 4px;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  transform: translateY(-3px);
+  background-color: #55c57a;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+
+.btn-text:active {
+  transform: translateY(0);
+  background-color: #55c57a;
+  color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+
+.composition {
+  position: relative;
+  /* When we hover the composition select the photo which is not hovered */ }
+  .composition__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1.5rem;
+    /* The three images have an absolute position realtive to the composition 
+     -- the first one i want stuck to the left but little above the container so top of -20px
+     -- the second one i want to stuck to the right so right 0 and little below so top of 20px
+     -- and the third photo i want at the bottom so top 100px and little to the left.
+     -- all of these values are how much away from left right and top.
+    */
+    /* To make one of the images show above the other we add a z index value to it. */ }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 0;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 20%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #28b485;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.6);
+      z-index: 25; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
 
 .header {
   height: 95vh;

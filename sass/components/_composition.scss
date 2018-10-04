@@ -1,0 +1,45 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1.5rem;
+
+    /* The three images have an absolute position realtive to the composition 
+     -- the first one i want stuck to the left but little above the container so top of -20px
+     -- the second one i want to stuck to the right so right 0 and little below so top of 20px
+     -- and the third photo i want at the bottom so top 100px and little to the left.
+     -- all of these values are how much away from left right and top.
+    */
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+    /* To make one of the images show above the other we add a z index value to it. */
+    &:hover {
+      outline: 1.5rem solid $color-primary-dark;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.6);
+      z-index: 25;
+    }
+  }
+  /* When we hover the composition select the photo which is not hovered */
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
