@@ -15,7 +15,7 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
@@ -156,20 +156,56 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  
   &__price-box {
     text-align: center;
     margin-bottom: 8rem;
     color: white;
   }
-
   &__price-only {
     font-size: 1.4rem;
     text-transform: uppercase;
   }
-  
   &__price-value {
     font-size: 6rem;
     font-weight: 100;
+  }
+  @include respond(tab-port) {
+    height: auto;
+    border-radius: 3px;
+    background-color: white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15); // Flipping the card
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+    /* When we hover the card the side should rotate */
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+      // we rotate the front of the card by moving it backside to -180deg.
+    }
+    // front side styling // back side styling.
+    &__details {
+      padding: 1rem 3rem;
+    }
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      transform: translate(0);
+      padding: 6rem 4rem 4rem 4rem;
+      text-align: center;
+    }
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+    &__price-value {
+      font-size: 6rem;
+    }
   }
 }
