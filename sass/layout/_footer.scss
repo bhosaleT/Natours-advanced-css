@@ -3,9 +3,17 @@
   padding: 10rem 0;
   font-size: 1.4rem;
 
+  @include respond(tab-port){
+      padding: 8rem 0;
+  }
+
   &__logo-box {
       text-align: center;
       margin-bottom: 8rem;
+
+      @include respond(tab-port){
+         margin-bottom: 5rem; 
+      }
   }
   &__logo {
     width: 15rem;
@@ -15,6 +23,10 @@
       border-top: 1px solid $color-grey-dark;
       padding-top: 1.5rem;
       display: inline-block; //we use inline block to limit the horizontal space taken by the line beacuse IB only takes space as much needed by the element and not much.
+      @include respond(tab-port){
+          width: 100%;
+          text-align: center;
+      }
   }
   &__list {
       list-style: none;
@@ -47,5 +59,11 @@
        border-top: 1px solid $color-grey-dark;
       padding-top: 1.5rem;
       display: inline-block;
+
+      @include respond(tab-port){
+          width: 100%;
+          text-align: center;
+      }
   }
+
 }

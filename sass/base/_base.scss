@@ -5,10 +5,29 @@
 }
 
 html {
-    //this defines what 1 rem is.
+  //this defines what 1 rem is.
   font-size: 62.5%;
+
+  @include respond(big-desktop) {
+    font-size: 75%; // here I want the 1rem to be 12px 12/16 = 75%
+  }
+
+  @include respond(tab-land) {
+    // 1200
+    font-size: 56.25%; //here i want 1 rem to be 9px 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //900px
+    font-size: 50%; // here i want 1rem to be 8px 8/16 = 50%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 30px;
+
+  @include respond(tab-port) {
+    padding: 0px;
+  }
 }

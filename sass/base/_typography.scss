@@ -11,6 +11,11 @@
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 4rem;
+    }
   }
 
   &--sub {
@@ -23,6 +28,11 @@
     animation-timing-function: ease-out;
     margin-bottom: 60px;
   }
+
+  @include respond(phone) {
+    letter-spacing: 0.5rem;
+    font-size: 15px;
+  }
 }
 
 body {
@@ -31,7 +41,6 @@ body {
   font-size: 16px;
   line-height: 1.7; /* adds line height more then default */
   color: $color-grey-dark;
-  padding: 30px;
 }
 
 /* adding gradient color to heading
@@ -53,18 +62,22 @@ body {
   -webkit-background-clip: text;
   transform: all 0.2s;
   letter-spacing: 2px;
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
   &:hover {
     transform: translateY(-2px) scale(1);
     text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
   }
 }
-
 .heading-tertiary {
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
 }
-
 .paragraph {
   font-size: $default-font-size;
   &:not(:last-child) {
