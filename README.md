@@ -7,6 +7,10 @@
 
 ## Getting Started
 This project uses node-sass library so to run this project you need `NODE` and `NPM` installed.
+### Download Node_Modules
+```
+npm install
+```
 ### To Run in Development mode
 ```
 npm run start
