@@ -642,7 +642,7 @@ body {
 .header {
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.901), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.901), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   /* always tries to fit the element inside the box */
   background-position: top;
@@ -650,6 +650,9 @@ body {
   /* Move in the clockwise direction to check which co-ordinates are moving x or Y */
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.901), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
   @media (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -660,9 +663,16 @@ body {
     /* The top and left 40px are relative to its parent element i.e. the header */
     top: 40px;
     left: 40px; }
+    @media (max-width: 37.5em) {
+      .header__logo-box {
+        top: 10px;
+        left: 10px; } }
   .header__logo {
     height: 35px;
     /* width is done by the browser */ }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        height: 20px; } }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -792,8 +802,8 @@ body {
       right: 4rem; } }
   @media (max-width: 37.5em) {
     .navigation__button {
-      top: 3rem;
-      right: 3rem; } }
+      top: 1rem;
+      right: 1rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -811,8 +821,8 @@ body {
       right: 4.5rem; } }
   @media (max-width: 37.5em) {
     .navigation__background {
-      top: 3.5rem;
-      right: 3.5rem; } }
+      top: 1rem;
+      right: 1rem; } }
 
 .navigation__nav {
   height: 100vh;
