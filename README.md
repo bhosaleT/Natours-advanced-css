@@ -22,6 +22,9 @@ npm run compile:sass
 <li>Playing video as a background </li>
 <li>Navigation Overlay </li>
 <li>Custom Radio Buttons</li>
+<li>Mobile Design</li>
+<li>Writing media queries using mixins</li>
+<li>Responsive Images</li>
  
   
 
